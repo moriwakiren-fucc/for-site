@@ -30,7 +30,6 @@
 
     .days p {
       position: relative;
-      overflow: hidden;
       font-family: Noto Serif JP;
       font-size: 1rem;
     }
@@ -40,13 +39,24 @@
       max-width: 100%;
     }
 
+    .detail {
+      position: relative;
+      width: 100%;
+    }
+    .detail img {
+      width: 32%;
+      margin: 0 1%;
+      float: left;
+    }
+
   </style>
 </head>
 <body>
 
 <div class="days" id="0822">
 <h2>8月22日(金)</h2>
-<img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/20250822-01.jpg">
+<img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/20250822-02.jpg">
+<p>今日は金属を使った溶液でも測定してみました。<br>データも順調に取れていると思います！</p>
 </div>
 <div class="days" id="0821">
 <h2>8月21日(木)</h2>
@@ -55,9 +65,11 @@
 <p><br>測定間をできるだけ短くするために…</p>
 <img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/20250821-02.jpg">
 <p>本日のデータ詳細</p>
+<div class="detail">
 <img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/20250821-03.jpg">
 <img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/20250821-04.jpg">
 <img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/20250821-05.jpg">
+</div>
 </div>
 <div class="days" id="0820">
 <h2>8月20日(水)</h2>
@@ -66,17 +78,11 @@
 <p>現段階では、２次関数近似に持っていきたいという感じです。今日のデータでは、切片などから算出した旋光度と実測値の誤差が約2°くらいだったので、とりあえず明日以降もデータをたくさんとって誤差をできるだけ小さくできるように、まずはたくさんのデータをとっていきましょう！<br>来た人にとっては状況が二転三転して申し訳ないです💦<br></p>
 <img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/20250820-02.JPEG ">
 <p>※今日、大会出場者を発表しました！これからも頑張っていきましょう！</p>
-<img src="https://moriwakiren-fucc.github.io/for-site/others/0007.jpg">
+<img src="https://moriwakiren-fucc.github.io/for-site/others/0008.jpg">
 </div>
 <div class="days" id="0819">
 <h2>8月19日(火)</h2>
-<p>前回（８月７日(木)）に取ったデータをプロットし、Pythonで近似をしました！<br>結果は以下のとおりです。</p>
-<img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/20250819-01.jpeg">
-<p>このグラフの数式は𝒚=𝒂sin²𝒃(𝒙+𝒄)+𝒅　において、以下の結果となりました。</p>
-<div style="overflow-x: auto; padding-bottom: 10px; white-space: nowrap;"><table style="min-width: 600px; border-collapse: collapse; text-align: right;"><br><tr><th>𝒕</th><th>𝒂</th><th>𝒃</th><th>𝒄</th><th>𝒅</th><th>𝗥²</th></tr><br><tr><td>0分</td><td>1155.340</td><td>0.998880</td><td>-2.438161</td><td>148.963</td><td>0.998420</td></tr><br><tr><td>15分</td><td>1090.651</td><td>0.996935</td><td>-2.547086</td><td>118.169</td><td>0.996364</td></tr><br><tr><td>30分</td><td>1017.702</td><td>0.994956</td><td>-2.624651</td><td>117.384</td><td>0.999738</td></tr><br><tr><td>45分</td><td>975.453</td><td>0.995929</td><td>-2.668139</td><td>108.471</td><td>0.999767</td></tr><br><tr><td>60分</td><td>959.974</td><td>0.993281</td><td>-2.709473</td><td>104.779</td><td>0.999837</td></tr><br></table></div>
-<p>もし、グラフが右に平行移動するならば、時間𝒕に対して<br>𝒂, 𝒃, 𝒅が変化しない<br>𝒄のみ段々小さくなる<br>となります。このデータは液漏れが響いてしまったのかなと思っています…。できるだけ液漏れしないように、頑張りましょう！！！<br>また、前回話題となった２種類のグラフも掲載しておきます！</p>
-<img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/20250819-02.jpeg">
-<img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/20250819-03.jpeg">
+<p><p>前回（８月７日(木)）に取ったデータをプロットし、Pythonで近似をしました！<br>結果は以下のとおりです。</p><br><img src="optical-rotation/lbfp/20250819-01.jpeg"><br><p>このグラフの数式は𝒚=𝒂sin²𝒃(𝒙+𝒄)+𝒅　において、以下の結果となりました。</p><br><div style="overflow-x: auto; padding-bottom: 10px; white-space: nowrap;"><table style="min-width: 600px; border-collapse: collapse; text-align: right;"><br><tr><th>𝒕</th><th>𝒂</th><th>𝒃</th><th>𝒄</th><th>𝒅</th><th>𝗥²</th></tr><br><tr><td>0分</td><td>1155.340</td><td>0.998880</td><td>-2.438161</td><td>148.963</td><td>0.998420</td></tr><br><tr><td>15分</td><td>1090.651</td><td>0.996935</td><td>-2.547086</td><td>118.169</td><td>0.996364</td></tr><br><tr><td>30分</td><td>1017.702</td><td>0.994956</td><td>-2.624651</td><td>117.384</td><td>0.999738</td></tr><br><tr><td>45分</td><td>975.453</td><td>0.995929</td><td>-2.668139</td><td>108.471</td><td>0.999767</td></tr><br><tr><td>60分</td><td>959.974</td><td>0.993281</td><td>-2.709473</td><td>104.779</td><td>0.999837</td></tr><br></table></div><br><p>もし、グラフが右に平行移動するならば、時間𝒕に対して<br>𝒂, 𝒃, 𝒅が変化しない<br>𝒄のみ段々小さくなる<br>となります。このデータは液漏れが響いてしまったのかなと思っています…。できるだけ液漏れしないように、頑張りましょう！！！<br>また、前回話題となった２種類のグラフも掲載しておきます！</p><br><img src="optical-rotation/lbfp/20250819-02.jpeg"><br><img src="optical-rotation/lbfp/20250819-03.jpeg"></p>
 </div>
 <div class="days" id="0807">
 <h2>8月7日(木)</h2>
@@ -86,12 +92,13 @@
 <h2>8月6日(水)</h2>
 <p>早速、旋光度計miniで測定をしてみました。今回の装置は-90°〜90°まで測定可能なため、幅広い角度のデータが取れました。それにより、これまでは2次関数でしか見られなかったグラフがサインカーブで観察できました！0分から60分では下図のように右にスライドしているのがわかりますが、間隔が小さいと誤差にも見えるレベルなので、「長さを長くしたり、濃度を高くしたりすれば良いのでは？」という意見が出ました。これは翌日やる予定です！</p>
 <img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/20250806-01.jpeg">
-<p>なお、OBの2人がいるのも次の日までなので、聞きたいこと・聞いておくべきことは何でも聞いておかなければならない。</p>
+<p>なお、OBの2人がいるのも次の日までなので、聞きたいこと・聞いておくべきことは何でも聞いておかなければいけません。</p>
 </div>
 <div class="days" id="0805">
 <h2>8月5日(火)</h2>
 <p>古城先輩・本田先輩の両OBが来てくれました。7月19,20日にやっていたグルコースの変旋光の続きをしました。まずは普通に計測しました。あと、それまでに話になってた旋光度計mini(仮称・下図参照)を本田先輩の多大な助けを借りて作り、完成までできました。そのため、翌日以降はあれで測定していこうって感じになっています。ただ、あくまで試作段階なので、今後は改良を重ねていく方針です。</p>
 <img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/20250805-01.jpg">
 </div>
+
 </body>
 </html>
