@@ -32,13 +32,16 @@
       width: 90%;
       margin: 5vh 5% 0;
       font-family: Noto Sans JP;
+      display: flex;
+      flex-wrap: none;
+      list-style: none;
     }
 
-    span {
+    .index li {
      white-space: nowrap;
     }
 
-    span a {
+    .index li a {
      text-decoration: none;
      color: #0000FF;
     }
@@ -82,15 +85,15 @@
 <body>
 <a href="#top" class="page_top_btn"><img src="https://moriwakiren-fucc.github.io/for-site/icon/topbtn.jpg"></a>
 
-<p id="top" class="index">
-<span><a href="#0822">8月22日(金)</a>　　</span>
-<span><a href="#0821">8月21日(木)</a>　　</span>
-<span><a href="#0820">8月20日(水)</a>　　</span>
-<span><a href="#0819">8月19日(火)</a>　　</span>
-<span><a href="#0807">8月7日(木)</a>　　</span>
-<span><a href="#0806">8月6日(水)</a>　　</span>
-<span><a href="#0805">8月5日(火)</a>　　</span>
-</p>
+<ul id="top" class="index">
+<li><a href="#0822">8月22日(金)</a>　　</li>
+<li><a href="#0821">8月21日(木)</a>　　</li>
+<li><a href="#0820">8月20日(水)</a>　　</li>
+<li><a href="#0819">8月19日(火)</a>　　</li>
+<li><a href="#0807">8月7日(木)</a>　　</li>
+<li><a href="#0806">8月6日(水)</a>　　</li>
+<li><a href="#0805">8月5日(火)</a>　　</li>
+</ul>
 <div class="days" id="0822">
 <h2>8月22日(金)</h2>
 <img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/junbichu.gif">
@@ -116,7 +119,13 @@
 </div>
 <div class="days" id="0819">
 <h2>8月19日(火)</h2>
-<p><p>前回（８月７日(木)）に取ったデータをプロットし、Pythonで近似をしました！<br>結果は以下のとおりです。</p><br><img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/20250819-01.jpeg"><br><p>このグラフの数式は𝒚=𝒂sin²𝒃(𝒙+𝒄)+𝒅　において、以下の結果となりました。</p><br><div style="overflow-x: auto; padding-bottom: 10px; white-space: nowrap;"><table style="min-width: 600px; border-collapse: collapse; text-align: right;"><br><tr><th>𝒕</th><th>𝒂</th><th>𝒃</th><th>𝒄</th><th>𝒅</th><th>𝗥²</th></tr><br><tr><td>0分</td><td>1155.340</td><td>0.998880</td><td>-2.438161</td><td>148.963</td><td>0.998420</td></tr><br><tr><td>15分</td><td>1090.651</td><td>0.996935</td><td>-2.547086</td><td>118.169</td><td>0.996364</td></tr><br><tr><td>30分</td><td>1017.702</td><td>0.994956</td><td>-2.624651</td><td>117.384</td><td>0.999738</td></tr><br><tr><td>45分</td><td>975.453</td><td>0.995929</td><td>-2.668139</td><td>108.471</td><td>0.999767</td></tr><br><tr><td>60分</td><td>959.974</td><td>0.993281</td><td>-2.709473</td><td>104.779</td><td>0.999837</td></tr><br></table></div><br><p>もし、グラフが右に平行移動するならば、時間𝒕に対して<br>𝒂, 𝒃, 𝒅が変化しない<br>𝒄のみ段々小さくなる<br>となります。このデータは液漏れが響いてしまったのかなと思っています…。できるだけ液漏れしないように、頑張りましょう！！！<br>また、前回話題となった２種類のグラフも掲載しておきます！</p><br><img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/20250819-02.jpeg"><br><img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/20250819-03.jpeg"></p>
+<p>前回（８月７日(木)）に取ったデータをプロットし、Pythonで近似をしました！<br>結果は以下のとおりです。</p>
+<img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/20250819-01.jpeg">
+<p>このグラフの数式は𝒚=𝒂sin²𝒃(𝒙+𝒄)+𝒅　において、以下の結果となりました。</p>
+<div style="overflow-x: auto; padding-bottom: 10px; white-space: nowrap;"><table style="min-width: 600px; border-collapse: collapse; text-align: right;"><br><tr><th>𝒕</th><th>𝒂</th><th>𝒃</th><th>𝒄</th><th>𝒅</th><th>𝗥²</th></tr><br><tr><td>0分</td><td>1155.340</td><td>0.998880</td><td>-2.438161</td><td>148.963</td><td>0.998420</td></tr><br><tr><td>15分</td><td>1090.651</td><td>0.996935</td><td>-2.547086</td><td>118.169</td><td>0.996364</td></tr><br><tr><td>30分</td><td>1017.702</td><td>0.994956</td><td>-2.624651</td><td>117.384</td><td>0.999738</td></tr><br><tr><td>45分</td><td>975.453</td><td>0.995929</td><td>-2.668139</td><td>108.471</td><td>0.999767</td></tr><br><tr><td>60分</td><td>959.974</td><td>0.993281</td><td>-2.709473</td><td>104.779</td><td>0.999837</td></tr><br></table></div>
+<p>もし、グラフが右に平行移動するならば、時間𝒕に対して<br>𝒂, 𝒃, 𝒅が変化しない<br>𝒄のみ段々小さくなる<br>となります。このデータは液漏れが響いてしまったのかなと思っています…。できるだけ液漏れしないように、頑張りましょう！！！<br>また、前回話題となった２種類のグラフも掲載しておきます！</p>
+<img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/20250819-02.jpeg">
+<img src="https://moriwakiren-fucc.github.io/for-site/optical-rotation/lbfp/20250819-03.jpeg">
 </div>
 <div class="days" id="0807">
 <h2>8月7日(木)</h2>
@@ -136,3 +145,4 @@
 
 </body>
 </html>
+
