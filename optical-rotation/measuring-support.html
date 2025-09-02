@@ -49,11 +49,6 @@ p {
 
 <script>
 
-  setInterval(() => {
-    const iframe = document.getElementById("my-iframe");
-    iframe.src = iframe.src;  // 再読み込み
-  }, 30000); // 30秒ごとに更新
-
   function changeIframeUrl() {
     const inputUrl = document.getElementById('urlInput').value;
     const iframe = document.getElementById('my-iframe');
@@ -66,6 +61,12 @@ p {
 
   // 入力が変わった瞬間にiframe更新
   document.getElementById('urlInput').addEventListener('input', changeIframeUrl);
+
+  
+  setInterval(() => {
+    const iframe = document.getElementById("my-iframe");
+    iframe.src = iframe.src;  // 再読み込み
+  }, 30000); // 30秒ごとに更新
 
   // ページ読み込み時に初期値を反映
   window.onload = () => {
