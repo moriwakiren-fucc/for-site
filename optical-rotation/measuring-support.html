@@ -3,9 +3,10 @@
 <head>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
-html {
+html, body {
   width: 100%;
   height: 100%;
+  margin: 0;
 }
 p {
   font-size: 22.5px;
@@ -20,24 +21,19 @@ p {
   border-radius: 15px;
   padding-left: 20px;
 }
-#button {
-  width: 60px;
-  height: 30px;
-  color: #FFFFFF;
-  background-color: #0000FF;
-  font-size: 20px;
-  border-radius:0 15px 15px 0;
-}
 #iframe-container {
   width: 100%;
   height: calc(100% - 50px);
   overflow: hidden;
   margin-top: 10px;
   position: relative;
+  display: flex;              /* 中央寄せのため */
+  justify-content: center;    /* 横方向中央 */
+  align-items: center;        /* 縦方向中央 */
 }
 #my-iframe {
   border: none;
-  transform-origin: top left; /* 左上基準で拡大縮小 */
+  transform-origin: top left; /* 拡大縮小の基準を左上にしておく */
   display: block;
 }
 </style>
@@ -75,23 +71,23 @@ p {
     const container = document.getElementById('iframe-container');
     const iframe = document.getElementById('my-iframe');
 
-    // 中身の基準サイズ（埋め込み先の想定解像度に合わせる）
-    const baseWidth = 581;
-    const baseHeight = 277;
+    const baseWidth = 581;   // 基準幅
+    const baseHeight = 277;  // 基準高さ
 
-    // コンテナの幅・高さに対する比率を計算
     const scaleX = container.clientWidth / baseWidth;
     const scaleY = container.clientHeight / baseHeight;
 
-    // どちらか小さい方に合わせることで、はみ出さずに必ず収まる
     const scale = Math.min(scaleX, scaleY);
 
     iframe.style.width = baseWidth + "px";
     iframe.style.height = baseHeight + "px";
     iframe.style.transform = `scale(${scale})`;
+
+    // 中央寄せのために余白を調整
+    iframe.style.marginLeft = ((container.clientWidth - baseWidth * scale) / 2) + "px";
+    iframe.style.marginTop = ((container.clientHeight - baseHeight * scale) / 2) + "px";
   }
 
-  // ウィンドウサイズが変わったら自動調整
   window.addEventListener('resize', resizeIframe);
 </script>
 
