@@ -48,12 +48,18 @@ p {
 </div>
 
 <script>
+
+  setInterval(() => {
+    const iframe = document.getElementById("my-iframe");
+    iframe.src = iframe.src;  // 再読み込み
+  }, 30000); // 30秒ごとに更新
+
   function changeIframeUrl() {
     const inputUrl = document.getElementById('urlInput').value;
     const iframe = document.getElementById('my-iframe');
 
     let newUrl = "https://oitast-my.sharepoint.com/personal/ough240080_st_oita-ed_jp/_layouts/15/Doc.aspx?sourcedoc={156ea14c-ef1a-460f-a9b2-f5de026c3b68}&action=embedview&wdAllowInteractivity=False&AllowTyping=True&Item='" 
-                 + inputUrl + "'!P2%3AW14&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True";
+                 + inputUrl + "'!P2%3AW14&wdDownloadButton=True&wdInConfigurator=True&wdInConfigurator=True&action=embedview&wdAllowInteractivity=False&wdRefreshOnOpen=True";
 
     iframe.src = newUrl;
   }
