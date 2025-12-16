@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+  <label for="award">賞</label>
+  <select name="賞" id="award">
+    <option value="　　　　　　　賞">選択してください</option>
+    <option value="内閣総理大臣賞">内閣総理大臣賞</option>
+    <option value="文部科学大臣賞">文部科学大臣賞</option>
+    <option value="環境大臣賞">環境大臣賞</option>
+    <option value="科学技術政策担当大臣賞">科学技術政策担当大臣賞</option>
+    <option value="全日本科学教育振興委員会賞">全日本科学教育振興委員会賞</option>
+    <option value="読売新聞社賞">読売新聞社賞</option>
+    <option value="科学技術振興機構賞">科学技術振興機構賞</option>
+    <option value="日本科学未来館賞">日本科学未来館賞</option>
+    <option value="旭化成賞">旭化成賞</option>
+    <option value="入選１等">入選１等</option>
+  </select>
+  <div style="height:3em;"></div>
+  <div id="Tmail"></div>
+  <div style="height:3em;"></div>
+  <div id="Ymail"></div>
+  <div style="height:3em;"></div>
+  <div id="sentences"></div>
+  <div style="height:3em;"></div>
+  <div id="Ysentences"></div>
+<script>
+const award = document.getElementById('award');
+award.addEventListener('change', () => {
+  const sentences = document.getElementById('sentences');
+  let body = '髙橋先生<br><br>先ほど学生科学賞の結果が発表されました。<br><br>結果は、<br>　　【' + award.value + '】<br>でした。<br><br>先生は研究発表もしなければならない上に、九州大会の準備もあって忙しい中、県審査のときから中央最終審査まで、僕たちのためにここまでやって頂いて、本当にありがとうございました。<br><br>リーダーはとても大変でしたが、全員で１つのものを完成させるという「共同研究の醍醐味」を味わえて、僕の人生の中ですごく良い経験ができたと思っています。<br><br>まだ、九州大会や全総文が残っていますので、今後もよろしくお願いします。<br><br>─────────<br>　森脇　廉<br>─────────'
+  sentences.innerHTML = body;
+  let mailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=moriwakiren.moriwakiren@gmail.com&su=${encodeURIComponent('ポスター班　日本学生科学賞結果')}&body=${encodeURIComponent(body)}`;
+  let gmailUrl = mailUrl.replace(/%3Cbr%3E/g, '%0D%0A');
+  Tmail.innerHTML = '<a style="color:#0000ff;" href=' + gmailUrl + '>メール送信</a>';
+  let Ybody = '吉藤先生<br><br>先ほど学生科学賞の結果が発表されました。<br><br>結果は、<br>　　【' + award.value + '】<br>でした！<br><br>担任や野球部なども大変な中、たまに化学部に来てくれたり、僕のお願いや相談に応えてくれたりしてたこと、感謝しています！<br><br>この９ヶ月間、吉藤先生は、担任として、また顧問として、僕がもがき苦しんでいる瞬間をたくさん見てきて、その度にアドバイスをしてくれたおかげで、少しは成長できたかなと思います。吉藤先生が担任で良かったです！<br><br>2-7もあと３ヶ月ほどありますので、これからもよろしくお願いします。<br><br>─────────<br>　森脇　廉<br>─────────'
+  Ysentences.innerHTML = Ybody;
+  let YmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=moriwakiren.moriwakiren@gmail.com&su=${encodeURIComponent('ポスター班　日本学生科学賞結果')}&body=${encodeURIComponent(Ybody)}`;
+  let YgmailUrl = YmailUrl.replace(/%3Cbr%3E/g, '%0D%0A');
+  Ymail.innerHTML = '<a style="color:#0000ff;" href=' + YgmailUrl + '>メール送信</a>';
+});
+</script>
+</body>
+</html>
