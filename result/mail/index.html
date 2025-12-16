@@ -1,5 +1,10 @@
 <!DOCTYPE HTML>
 <html>
+<head>
+  <tilte>
+    結果のメール送信
+  </tilte>
+</head>
 <body>
   <label for="award">賞</label>
   <select name="賞" id="award">
@@ -31,12 +36,12 @@ award.addEventListener('change', () => {
   sentences.innerHTML = body;
   let mailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=moriwakiren.moriwakiren@gmail.com&su=${encodeURIComponent('ポスター班　日本学生科学賞結果')}&body=${encodeURIComponent(body)}`;
   let gmailUrl = mailUrl.replace(/%3Cbr%3E/g, '%0D%0A');
-  Tmail.innerHTML = '<a style="color:#0000ff;" href=' + gmailUrl + '>メール送信</a>';
+  Tmail.innerHTML = '<a style="color:#0000ff;" href=' + gmailUrl + '>髙橋先生にメール送信</a>';
   let Ybody = '吉藤先生<br><br>先ほど学生科学賞の結果が発表されました。<br><br>結果は、<br>　　【' + award.value + '】<br>でした！<br><br>担任や野球部なども大変な中、たまに化学部に来てくれたり、僕のお願いや相談に応えてくれたりしてたこと、感謝しています！<br><br>この９ヶ月間、吉藤先生は、担任として、また顧問として、僕がもがき苦しんでいる瞬間をたくさん見てきて、その度にアドバイスをしてくれたおかげで、少しは成長できたかなと思います。吉藤先生が担任で良かったです！<br><br>2-7もあと３ヶ月ほどありますので、これからもよろしくお願いします。<br><br>─────────<br>　森脇　廉<br>─────────'
   Ysentences.innerHTML = Ybody;
   let YmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=moriwakiren.moriwakiren@gmail.com&su=${encodeURIComponent('ポスター班　日本学生科学賞結果')}&body=${encodeURIComponent(Ybody)}`;
   let YgmailUrl = YmailUrl.replace(/%3Cbr%3E/g, '%0D%0A');
-  Ymail.innerHTML = '<a style="color:#0000ff;" href=' + YgmailUrl + '>メール送信</a>';
+  Ymail.innerHTML = '<a style="color:#0000ff;" href=' + YgmailUrl + '>吉藤先生にメール送信</a>';
 });
 </script>
 </body>
