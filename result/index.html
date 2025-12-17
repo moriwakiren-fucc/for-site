@@ -5,8 +5,10 @@
   <title>結果発表</title>
 </head>
 <body>
-
-  <img id="awardImage" style="display:none;">
+  <details>
+    <summary>結果を見る</summary>
+    <img id="awardImage" style="display:none;">
+  </details>
 
   <script>
     const params = new URLSearchParams(window.location.search);
@@ -14,7 +16,7 @@
 
     if (award) {
       const img = document.getElementById("awardImage");
-      img.src = `images/${award}.jpg`;
+      img.src = `imgs/${award}.jpg`;
       img.style.display = "block";
     }
   </script>
