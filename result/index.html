@@ -2,13 +2,25 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>結果発表</title>
+  <title>結果報告</title>
+  <style>
+    h1 {
+      margin-left: 5vw;
+    }
+    section {
+      margin-left: 5vw;
+      width: 90vw;
+    }
+  </style>
 </head>
 <body>
-  <details>
-    <summary>結果を見る</summary>
-    <img id="awardImage" style="display:none; width:90vw;">
-  </details>
+  <h1>結果報告</h1>
+  <section>
+    <details>
+      <summary>結果を見る</summary>
+      <img id="awardImage" style="display:none; width:90vw;">
+    </details>
+  </section>
 
   <script>
     const params = new URLSearchParams(window.location.search);
