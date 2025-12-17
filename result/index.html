@@ -1,1 +1,23 @@
-<!
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>結果発表</title>
+</head>
+<body>
+
+  <img id="awardImage" style="display:none;">
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const award = params.get("award");
+
+    if (award) {
+      const img = document.getElementById("awardImage");
+      img.src = `${award}.jpg`;
+      img.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
