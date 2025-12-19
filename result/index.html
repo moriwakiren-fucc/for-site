@@ -24,6 +24,7 @@
     <details>
       <summary>結果報告</summary>
       <img id="awardImage">
+      <img id="tate">
     </details>
   </section>
 
@@ -35,6 +36,11 @@
       const img = document.getElementById("awardImage");
       img.src = `imgs/${award}.jpeg`;
       img.style.display = "block";
+    }
+        if (award) {
+      const timg = document.getElementById("tate");
+      timg.src = `imgs/10_tate.jpeg`;
+      timg.style.display = "block";
     }
   </script>
 
